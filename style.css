@@ -1,0 +1,514 @@
+/*Min Reset*/
+body,
+html {
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*INITIAL LOADER STYLES*/
+.loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.logo {
+    width: 220px;
+    margin: 50px auto;
+}
+
+.logo p {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-top {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.logo-top::after {
+    content: "\00a9";
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    margin-left: 2px;
+}
+
+.logo-middle {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.logo-middle span {
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: top;
+    color: #FF6821;
+    margin-top: -8px;
+}
+
+.logo-bottom {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-left: 5px !important;
+}
+
+.loader {
+    width: 150px;
+    height: 18px;
+    border: 2px solid #b2b2b2;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 2px 1px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.loader span {
+    width: 9px;
+    height: 100%;
+    background: linear-gradient(to bottom, #2838c7 0%, #5979ef 17%, #869ef3 32%, #869ef3 45%, #5979ef 59%, #2838c7 100%);
+    display: inline-block;
+    margin-right: 2px;
+    animation: loader 2s infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes loader {
+    from {
+        transform: translate(-30px)
+    }
+
+    to {
+        transform: translate(150px)
+    }
+}
+
+/*----- DESKTOP STYLES ------*/
+
+.loader-wrapp {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    z-index: 99999;
+}
+
+.desktop {
+    background-image: url(./images/xp_wallpaper_1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative
+}
+
+.windows-bar {
+    height: 34px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(180deg, #63a9f5 0%, #2357d4 15%, rgba(16, 53, 142, 1) 90%);
+    bottom: 0;
+    display: flex;
+    z-index: 9999 !important;
+}
+
+.button-start-menu {
+    width: 102px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(180deg, #85bb84 0%, #459b43 10%, #419444 30%, #3bac3a 70%, #459b43 90%);
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: unset;
+    justify-content: center;
+    font-weight: 600;
+    height: 100%;
+    border-radius: 0 17px 17px 0px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-start-menu:hover {
+    background-image: linear-gradient(180deg, #abd2aa 0%, #60b15f 10%, #5fb562 30%, #58c557 70%, #6ac168 90%);
+}
+
+.button-start-menu img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.applications {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.applications li {
+    list-style-type: none;
+    display: block;
+    width: 20px;
+    margin-right: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.applications li:hover {
+    list-style-type: none;
+    display: block;
+    width: 20px;
+    background: rgba(210, 210, 210, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+
+.applications li img {
+    display: block;
+    width: 100%;
+}
+
+.blur-right-bar {
+    width: 144px;
+    display: flex;
+    align-items: center;
+    background: #0F8AE7;
+    background-image: linear-gradient(180deg, #63a9f5 0%, #0F8AE7 90%, #63a9f5 100%);
+    padding-left: 10px;
+}
+
+.blur-right-bar-applications {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.blur-right-bar-applications li {
+    list-style-type: none;
+    display: block;
+    width: 20px;
+    margin-right: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.blur-right-bar-applications li:hover {
+    list-style-type: none;
+    display: block;
+    width: 20px;
+    background: rgba(210, 210, 210, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+
+.blur-right-bar-applications li img {
+    display: block;
+    width: 100%;
+}
+
+.time {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+/* START MENU STYLES */
+
+.start-menu {
+    position: absolute;
+    left: 0;
+    top: -479px;
+    border: 1px solid;
+    width: 384px;
+    height: 479px;
+    display: none;
+}
+
+.start-menu-header {
+    height: 66px;
+    background-image: linear-gradient(180deg, #225cc5 0%, #66a0e4 4%, #1767cd 9%, #3482e3 94%, #225cc5 98%);
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.start-menu-header .user-pic img {
+    display: block;
+    width: 48px;
+    margin-right: 10px;
+}
+
+.start-menu-header .user-name {
+    color: white;
+    font-weight: 600;
+}
+
+.start-menu-applications {
+    width: 100%;
+    height: 368px;
+    background: blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.start-menu-applications-box {
+    width: 50%;
+    height: 100%;
+    padding: 7px;
+}
+
+.menu-applications-left {
+    background: white;
+    border-right: 1px solid #a1c4ef;
+}
+
+.menu-applications-right {
+    background: #d3e5fa;
+}
+
+.start-menu-bottom-bar {
+    width: 100%;
+    background-image: linear-gradient(180deg, #225cc5 0%, #3a8aec 6%, #225cc5 90%);
+    height: 45px;
+    padding: 7px;
+}
+
+.start-menu-bottom-bar .pc-power {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.start-menu-bottom-bar .pc-power li {
+    display: block;
+    list-style-type: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.start-menu-bottom-bar .pc-power li img {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.start-menu-applications-box .apps {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.start-menu-applications-box .apps li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    margin-top: 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.start-menu-applications-box .apps li:hover,
+.start-menu-applications-box .apps li:hover .second {
+    background: #316AC5;
+    color: white !important;
+}
+
+.start-menu-applications-box .apps li:hover a {
+    color: white;
+}
+
+.menu-applications-right .apps li {
+    font-size: 13px;
+}
+
+.start-menu-applications-box .apps li .first,
+.start-menu-applications-box .apps li .second {
+    display: block;
+}
+
+.start-menu-applications-box .apps li .second {
+    color: grey;
+}
+
+.start-menu-applications-box .apps .menu-icon {
+    width: 27px;
+    margin-right: 10px;
+}
+
+.start-menu-applications-box .applications-devider::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #cacaca;
+    margin: auto;
+    margin-top: 11px;
+
+}
+
+.all-programs-wrapper {
+    padding: 6.5px !important;
+    padding-left: 37px !important;
+    position: relative;
+}
+
+.all-programs-wrapper a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.all-programs-wrapper .all-programs-box {
+    position: absolute;
+    width: 182px;
+    height: 290px;
+    left: 162px;
+    background: white;
+    top: -261px;
+    display: none;
+    border: 1px solid #55a1ff;
+    border-left: 5px solid #2d7ce2;
+
+}
+
+.all-programs-box ul {
+    padding: 0;
+    margin: 0;
+}
+
+.all-programs-box ul li {
+    list-style-type: none;
+    color: black;
+    margin: 0 !important;
+    padding: 3px !important;
+}
+
+.all-programs-box ul li img {
+    width: 22px;
+}
+
+.all-programs-box .w-update::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #cacaca;
+    margin: auto;
+    margin-top: 11px;
+
+}
+
+.all-programs-wrapper:hover .all-programs-box {
+    display: block !important;
+}
+
+.my-documents-wrapper {
+    position: relative;
+}
+
+.my-documents-wrapper .my-documents-box {
+    width: 187px;
+    height: 98px;
+    background: white;
+    border: 1px solid #55a1ff;
+    border-left: 5px solid #2d7ce2;
+    position: absolute;
+    top: 0px;
+    left: 176px;
+    display: none;
+}
+
+.my-documents-wrapper:hover .my-documents-box {
+    display: block !important;
+}
+
+.my-documents-box ul {
+    list-style-type: none;
+    color: black;
+    margin: 0 !important;
+    padding: 0px !important;
+}
+
+.my-documents-box ul li {
+    list-style-type: none;
+    color: black;
+    margin: 0 !important;
+    padding: 3px !important;
+}
+
+.my-documents-box ul li img {
+    width: 17px;
+}
+
+/* DESKTOP APPLICATIONS */
+
+.desktop-applications {
+    width: 40%;
+    height: calc(100vh - 34px);
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-auto-rows: 120px;
+    grid-gap: 5px;
+}
+
+.desk-item {
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+}
+
+.desk-item img {
+    width: 30px;
+}
+
+/* ACTIVE CLASSES */
+
+.active {
+    display: block;
+}
